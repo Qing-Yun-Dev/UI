@@ -127,10 +127,10 @@ end
 
 local function Create(Name, Properties, Children)
     local Object = Instance.new(Name)
-    for _, v in next, Properties or {} do
+    for i, v in next, Properties or {} do
         Object[i] = v
     end
-    for _, v in next, Children or {} do
+    for i, v in next, Children or {} do
         v.Parent = Object
     end
     return Object
@@ -229,7 +229,7 @@ end
 
 local function SaveCfg(Name)
     local Data = {}
-    for _,v in pairs(OrionLib.Flags) do
+    for i,v in pairs(OrionLib.Flags) do
         if v.Save then
             if v.Type == "Colorpicker" then
                 Data[i] = PackColor(v.Value)
@@ -1660,18 +1660,18 @@ function OrionLib:MakeWindow(WindowConfig)
             end)
 
             local SectionFunction = {}
-            for _, v in next, GetElements(SectionFrame.Holder) do
+            for i, v in next, GetElements(SectionFrame.Holder) do
                 SectionFunction[i] = v
             end
             return SectionFunction
         end    
 
-        for _, v in next, GetElements(Container) do
+        for i, v in next, GetElements(Container) do
             ElementFunction[i] = v
         end
 
         if TabConfig.PremiumOnly then
-            for _, v in next, ElementFunction do
+            for i, v in next, ElementFunction do
                 ElementFunction[i] = function()
                 end
             end
