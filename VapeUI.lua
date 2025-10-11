@@ -182,8 +182,8 @@ function UI:Window(text, preset, closebind)
 
     local UIToggled = false
     UserInputService.InputBegan:Connect(
-        function(v)
-            if v.KeyCode == CloseBind then
+        function(Input)
+            if Input.KeyCode == CloseBind then
                 if UIToggled == false then
                     UIToggled = true
 
