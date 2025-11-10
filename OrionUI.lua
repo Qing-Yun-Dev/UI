@@ -412,7 +412,7 @@ local function CatchError(Config,Value)
     if OrionLib["Loaded"] == false then return end
     local suc,err = pcall(function() Config.Callback(Value) end)
     if not suc then 
-        warn("""..Config.Name..""","got a error:" .. err)
+        warn('"'..Config.Name..'"',"got a error:" .. err)
         OrionLib:MakeNotification({
             Name = "OrionLib.CatchError.Name",
             Content = "OrionLib.CatchError.Content",
