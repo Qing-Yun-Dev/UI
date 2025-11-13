@@ -7,10 +7,10 @@ local Mouse = LocalPlayer:GetMouse()
 local PresetColor = Color3.fromRGB(44, 120, 224)
 local CloseBind = Enum.KeyCode.F5
 
-local VapeUI = Instance.new("ScreenGui")
-VapeUI.Name = "VapeUI"
-VapeUI.Parent = game.CoreGui
-VapeUI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+local Vape = Instance.new("ScreenGui")
+Vape.Name = "Vape"
+Vape.Parent = game.CoreGui
+Vape.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 coroutine.wrap(
     function()
@@ -94,7 +94,7 @@ function UI:Window(text, preset, closebind)
     local DragFrame = Instance.new("Frame")
 
     Main.Name = "Main"
-    Main.Parent = VapeUI
+    Main.Parent = Vape
     Main.AnchorPoint = Vector2.new(0.5, 0.5)
     Main.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
     Main.BorderSizePixel = 0
