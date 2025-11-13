@@ -19,10 +19,10 @@ UICorner.Parent = ImageButton
 UICorner.CornerRadius = UDim.new(0, 0)
 ImageButton.MouseButton1Down:Connect(function()
     if ToggleUI == false then
-        game.CoreGui.VapeUI.Main:TweenSize(UDim2.new(0, 0, 0, 0), "In", "Quad", 0.4, true)
+        game.CoreGui.Vape.Main:TweenSize(UDim2.new(0, 0, 0, 0), "In", "Quad", 0.4, true)
         ToggleUI = true
     else
-        game.CoreGui.VapeUI.Main:TweenSize(UDim2.new(0, 560, 0, 320), "Out", "Quad", 0.4, true)
+        game.CoreGui.Vape.Main:TweenSize(UDim2.new(0, 560, 0, 320), "Out", "Quad", 0.4, true)
         ToggleUI = false
     end
 end)
