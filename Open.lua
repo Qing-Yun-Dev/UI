@@ -1,10 +1,10 @@
-local OpenUI = Instance.new("ScreenGui")
+local Open = Instance.new("ScreenGui")
 local ImageButton = Instance.new("ImageButton")
 local UICorner = Instance.new("UICorner")
-OpenUI.Name = "OpenUI"
-OpenUI.Parent = game.CoreGui
-OpenUI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-ImageButton.Parent = OpenUI
+Open.Name = "Open"
+Open.Parent = game.CoreGui
+Open.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+ImageButton.Parent = Open
 ImageButton.BorderSizePixel = 0
 ImageButton.LayoutOrder = 1
 ImageButton.ImageColor3 = Color3.fromRGB(255, 255, 255)
