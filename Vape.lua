@@ -1600,8 +1600,8 @@ function UI:Window(text, preset, closebind)
             TextBox.TextSize = 15.000
 
             TextBox.FocusLost:Connect(
-                function(ep)
-                    if ep then
+                function(KeyInput)
+                    if KeyInput then
                         if #TextBox.Text > 0 then
                             pcall(callback, TextBox.Text)
                             if disapper then
