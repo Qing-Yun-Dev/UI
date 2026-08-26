@@ -1599,15 +1599,11 @@ function UI:Window(text, preset, closebind)
             TextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
             TextBox.TextSize = 15.000
 
-            TextBox.FocusLost:Connect(
-                function(Input)
-                    if Input then
-                        if #TextBox.Text > 0 then
-                            pcall(callback, TextBox.Text)
-                            if disapper then
-                                TextBox.Text = ""
-                            end
-                        end
+            TextBox.FocusLost:Connect(function()
+                if #TextBox.Text > 0 then
+                    pcall(callback, TextBox.Text)
+                    if disapper then
+                        TextBox.Text = ""
                     end
                 end
             )
